@@ -1,0 +1,33 @@
+#:kivy 1.0
+#:import kivy kivy
+
+<GameBoxLayout>:
+    orientation: 'vertical'
+    Label:
+        text: "Rock-Paper-Scissor"
+        font_size: 30
+    Label:
+        id: voice_label
+        text: ''
+    BoxLayout:
+        orientation: 'horizontal'
+        Image:
+            source: 'images\\ROCK.png'
+            size: (80,80)
+            on_touch_down: root.com('ROCK')
+        Image:
+            source: 'images\\PAPER.png'
+            size: (80,80)
+            on_touch_down: root.com('PAPER')
+        Image:
+            source: 'images\\SCISSOR.png'
+            size: (80,80)
+            on_touch_down: root.com("SCISSOR")
+    Label:
+        orientation: 'vertical'
+        id: compick
+        text: ''
+    Label:
+        orientation: 'vertical'
+        id: result
+        text: ''  
